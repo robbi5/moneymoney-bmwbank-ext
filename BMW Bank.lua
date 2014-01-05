@@ -8,7 +8,7 @@
 -- Get balance and transactions for BMW Bank.
 --
 
-WebBanking{version     = 1.05,
+WebBanking{version     = 1.06,
            country     = "de",
            url         = "https://banking.bmwbank.de/privat",
            description = string.format(MM.localizeText("Get balance and transactions for %s"), "BMW Bank")}
@@ -144,7 +144,7 @@ function RefreshAccount (account, since)
   -- Set $event (hidden)
   html:xpath("//input[@name='$event']"):attr("value", "search")
 
-  print("Submitting transaction search form for " .. accountNumber)
+  print("Submitting transaction search form for " .. account.accountNumber)
   html = HTML(connection:request(html:xpath("//form[@action]"):submit()))
 
   -- Get Balance from text next to select box
