@@ -70,7 +70,7 @@ function InitializeSession (protocol, bankCode, username, customer, password)
   -- Check for login error in head/javascript.
   local htmlStr = html:html()
   local badLoginTries = string.match(htmlStr, 'smTryNo%s*=%s*[\'"]([^\'"]+)')
-  if badLoginTries and string.len(badLoginTries) > 0 and badLoginTries > 0 then
+  if badLoginTries and string.len(badLoginTries) > 0 and tonumber(badLoginTries) > 0 then
     return LoginFailed
   end
 end
