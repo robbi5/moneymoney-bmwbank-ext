@@ -29,7 +29,7 @@
 -- Get balance and transactions for BMW Bank.
 --
 
-WebBanking{version     = 1.06,
+WebBanking{version     = 1.07,
            country     = "de",
            url         = "https://banking.bmwbank.de/privat",
            description = string.format(MM.localizeText("Get balance and transactions for %s"), "BMW Bank")}
