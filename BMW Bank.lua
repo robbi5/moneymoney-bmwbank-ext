@@ -29,7 +29,7 @@
 -- Get balance and transactions for BMW Bank.
 --
 
-WebBanking{version     = 1.07,
+WebBanking{version     = 1.08,
            country     = "de",
            url         = "https://banking.bmwbank.de/privat",
            description = string.format(MM.localizeText("Get balance and transactions for %s"), "BMW Bank")}
@@ -65,11 +65,10 @@ local function strToAmount (str, removeFormatting)
   strNew = strRemoveSpaces(strNew)
 
   if (removeFormatting == true) then
-    strNew = string.gsub(string.gsub(strNew, "%.", ""), ",", ".")
-    strNew = string.gsub(strNew, "[^%.%d]", "")
+    strNew = string.gsub(string.gsub(strNew, "[^%d,-]", ""), ",", ".")
   end
 
-  return strNew
+  return tonumber(strNew)
 end
 
 -- The following variables are used to save state.
