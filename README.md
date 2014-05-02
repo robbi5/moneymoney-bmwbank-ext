@@ -4,15 +4,15 @@ Installation
 ------------
 ### Signierte Installation
 
-Lade die signierte `BMW Bank.lua` von den [Community-Extensions](http://moneymoney-app.com/extensions/) und lege diese nach `~/Library/Application Support/MoneyMoney/Extensions`. Die Signaturprüfung in MoneyMoney kann mit dieser Version aktiviert bleiben.
+Lade die signierte `BMW Bank.lua` von den [Community-Extensions](http://moneymoney-app.com/extensions/) und lege diese in den `Extensions`-Ordner. Öffne dazu in MoneyMoney das Menü *Hilfe* und klicke auf *Zeige Datenbank im Finder*. Die Signaturprüfung in MoneyMoney kann mit dieser Version aktiviert bleiben.
 
 ### Unsignierte Installation aus dem GitHub-Repository
 
-Kopiere die `BMW Bank.lua`-Datei nach `~/Library/Application Support/MoneyMoney/Extensions`. Für diese Version musst du zusätzlich in MoneyMoney.app die Signaturprüfung ausschalten. Das Häkchen dafür findest du in der App unter Einstellungen > Extensions.
+Kopiere die `BMW Bank.lua`-Datei in den `Extensions`-Ordner. Öffne dazu in MoneyMoney das Menü *Hilfe* und klicke auf *Zeige Datenbank im Finder*. Für diese Version musst du zusätzlich in MoneyMoney.app die Signaturprüfung ausschalten. Das Häkchen dafür findest du in der App unter *Einstellungen* > *Extensions*.
 
 ### Konto einrichten
 
-Danach kannst du unter Konto > Konto hinzufügen dein BMW Bank-Konto zu MoneyMoney hinzufügen. Gebe dazu die BLZ `70220300` ein, als Benutzernamen musst du deine (Online-)Kundennummer verwenden, als Passwort deine Online-PIN - also genau wie im Online-Banking auf banking.bmwbank.de auch.
+Danach kannst du unter *Konto* > *Konto hinzufügen* dein BMW Bank-Konto zu MoneyMoney hinzufügen. Gebe dazu die BLZ `70220300` ein, als Benutzername musst du deine (Online-)Kundennummer verwenden, als Passwort deine Online-PIN - also genau wie im Online-Banking auf banking.bmwbank.de auch.
 
 Fragen oder Probleme?
 ---------------------
