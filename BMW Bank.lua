@@ -29,7 +29,7 @@
 -- Get balance and transactions for BMW Bank.
 --
 
-WebBanking{version     = 1.08,
+WebBanking{version     = 1.09,
            country     = "de",
            url         = "https://banking.bmwbank.de/privat",
            description = string.format(MM.localizeText("Get balance and transactions for %s"), "BMW Bank")}
@@ -146,7 +146,7 @@ function ListAccounts (knownAccounts)
 end
 
 function RefreshAccount (account, since)
-  local transactions = nil
+  local transactions = {}
 
   -- Load transaction search page with predefined account number
   html = HTML(connection:get(url .. '/banking/-?$part=Overview.content.BankAccounts.Overview&$event=accountOverviewChangeTurnOverSearch&preAccNo=' .. account.accountNumber))
@@ -174,7 +174,6 @@ function RefreshAccount (account, since)
 
   -- Check if the HTML table with transactions exists.
   if html:xpath("//div[@class='table-transactioncontainer']//table"):length() > 0 then
-    transactions = {}
 
     -- Extract transactions.
     html:xpath("//div[@class='table-transactioncontainer']//table[1]//tr[position()>1]"):each(function (index, row)
